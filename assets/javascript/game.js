@@ -41,5 +41,6 @@ document.onkeydown = function (event) {
     guessesLeft.textContent = "Guesses left:" + availableGuesses;
     pastGuesses.textContent = "Your guesses so far:" + userGuess;
     // cant get the guesses to stay //
+    // i know it should be appendChild to some extent but I couldn't get the code to work properly
 }
 
