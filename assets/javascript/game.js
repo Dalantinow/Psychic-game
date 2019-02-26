@@ -13,7 +13,9 @@ var lossesText = document.getElementById("losses-text");
 var guessesLeft = document.getElementById("guesses-left");
 var pastGuesses = document.getElementById("past-guesses");
     
-
+function newgame(availableGuesses){
+    this.availableGuesses = 9
+}
 
 
 
@@ -28,9 +30,11 @@ document.onkeyup = function (event) {
 
         if (userGuess === computerGuess) {
             wins++;
+            newgame();
         }
         else if (userGuess != computerGuess && availableGuesses === 0) {
             losses++;
+            newgame();
             
             
         }
