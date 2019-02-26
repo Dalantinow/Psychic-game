@@ -3,23 +3,21 @@ var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
 
 var wins = 0;
 var losses = 0;
-    
 var availableGuesses = 9;
-
 
 var directionsText = document.getElementById("directions-text");
 var winsText = document.getElementById("wins-text");
 var lossesText = document.getElementById("losses-text");
 var guessesLeft = document.getElementById("guesses-left");
 var pastGuesses = document.getElementById("past-guesses");
-    
-function newgame(availableGuesses){
+
+
+
+function newgame(availableGuesses) {
     this.availableGuesses = 9
 }
 
-
-
-document.onkeyup = function (event) {
+document.onkeydown = function (event) {
 
     var userGuess = event.key;
 
@@ -35,13 +33,8 @@ document.onkeyup = function (event) {
         else if (userGuess != computerGuess && availableGuesses === 0) {
             losses++;
             newgame();
-            
-            
         }
-        // cant get the available guesses to reset to 9 //
     }
-
-
 
     winsText.textContent = "Wins:" + wins;
     lossesText.textContent = "Losses:" + losses;
