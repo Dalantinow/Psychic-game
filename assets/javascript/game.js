@@ -10,8 +10,7 @@ var winsText = document.getElementById("wins-text");
 var lossesText = document.getElementById("losses-text");
 var guessesLeft = document.getElementById("guesses-left");
 var pastGuesses = document.getElementById("past-guesses");
-
-
+var newText = "Your guesses so far:"
 
 function newgame(availableGuesses) {
     this.availableGuesses = 9
@@ -39,7 +38,9 @@ document.onkeydown = function (event) {
     winsText.textContent = "Wins:" + wins;
     lossesText.textContent = "Losses:" + losses;
     guessesLeft.textContent = "Guesses left:" + availableGuesses;
-    pastGuesses.textContent = "Your guesses so far:" + userGuess;
+    newText = newText + userGuess
+    pastGuesses.textContent = newText
+    
     // cant get the guesses to stay //
     // i know it should be appendChild to some extent but I couldn't get the code to work properly
 }
