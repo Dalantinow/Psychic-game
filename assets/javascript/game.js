@@ -13,7 +13,8 @@ var pastGuesses = document.getElementById("past-guesses");
 var newText = "Your guesses so far:"
 
 function newgame(availableGuesses) {
-    this.availableGuesses = 9
+    this.availableGuesses = 9;
+    // pastGuesses = ""; tried this but not working totally
 }
 
 document.onkeydown = function (event) {
@@ -28,10 +29,14 @@ document.onkeydown = function (event) {
         if (userGuess === computerGuess) {
             wins++;
             newgame();
+            
         }
         else if (userGuess != computerGuess && availableGuesses === 0) {
             losses++;
             newgame();
+            
+           
+
         }
     }
 
@@ -40,8 +45,8 @@ document.onkeydown = function (event) {
     guessesLeft.textContent = "Guesses left:" + availableGuesses;
     newText = newText + userGuess
     pastGuesses.textContent = newText
+
+    // can't get my letters to reset after winning or losing
     
-    // cant get the guesses to stay //
-    // i know it should be appendChild to some extent but I couldn't get the code to work properly
 }
 
