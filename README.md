@@ -11,3 +11,5 @@ __# Psychic-game__
             *functions
             *on key up events
             *if/ else if statements
+
+Link : https://dalantinow.github.io/Psychic-game/
